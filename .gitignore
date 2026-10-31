@@ -1,0 +1,60 @@
+# ============================================================
+# T-sim — Git ignore rules
+# PlatformIO / ESP32-S3 environmental monitoring station
+# The PlatformIO project lives in the t-sim/ subdirectory.
+# ============================================================
+
+# ---------- PlatformIO ----------
+.pio/
+.pioenvs/
+.piolibdeps/
+.pio/build/
+compile_commands.json
+
+# ---------- Build output / generated SDK config ----------
+build/
+sdkconfig
+sdkconfig.old
+*.bin
+*.elf
+*.map
+*.hex
+
+# ---------- VS Code (generated files only) ----------
+**/.vscode/c_cpp_properties.json
+**/.vscode/launch.json
+**/.vscode/ipch/
+**/.vscode/*.db
+**/.vscode/*.db-*
+**/.vscode/.browse.*
+
+# ---------- VS Code Local History / editor ----------
+.history/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Python tooling ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---------- Local secrets ----------
+# 憑證已改成 Your ... 佔位符；
+# 真實設定請放 secrets.h 或環境變數，不要 commit。
+.env
+.env.*
+!.env.example
+secrets.h
+*.pem
+*.key
+
+# ---------- Logs ----------
+*.log
